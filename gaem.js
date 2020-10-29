@@ -1,7 +1,9 @@
 // variable for pictures, and other
 let bill;
 let sprOne;
+let walkOne
 function preload(){
+	walkOne = loadAnimation("assets/billywalk1.png","assets/billywalk2.png")
 	bill = loadImage('assets/billystill.png');
 }
 function setup() {
