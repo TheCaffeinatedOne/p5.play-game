@@ -9,18 +9,15 @@ function setup() {
   plr.velocity.y;
   plr.velocity.x;
 	plr.addImage(bill);
-	if (left = true) {
-		plr.mirrorX(-1);
-	}else if ( plr.velocity.x = false) {
+	if (left = false) {
+	}else if (left = true) {
 		plr.mirrorX(1);
 	}
 }
-
 function draw() {
 	background(255);
   drawSprites();
 }
-
 function keyPressed() {
 	switch(keyCode) {
 		case 37:
