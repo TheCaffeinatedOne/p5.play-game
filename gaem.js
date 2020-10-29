@@ -9,17 +9,16 @@ function setup() {
   plr.velocity.y;
   plr.velocity.x;
 	plr.addImage(bill);
-
+	if (plr.velocity.x => 0) {
+		plr.mirrorX(-1);
+	}else if (0 => plr.velocity.x) {
+		plr.mirrorX(1);
+	}
 }
 
 
 function draw() {
 	background(255);
-	if (plr.velocity.x => 0) {
-			plr.mirrorX(-1);
-	}else if (0 => plr.velocity.x) {
-		plr.mirrorX(1);
-	}
   drawSprites();
 
 }
