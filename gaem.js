@@ -2,7 +2,7 @@
 let bill;
 let sprOne;
 function setup() {
-	createCanvas(600, 700);
+	createCanvas(1350, 600);
  	bill = loadImage('assets/billystill.png');
  	sprOne = createSprite(width/2, height/2, 50, 50);
   sprOne.velocity.y;
