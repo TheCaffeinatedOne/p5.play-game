@@ -12,7 +12,7 @@ function setup() {
 	if (plr.velocity.x => 0) {
 			plr.mirrorX(-1);
 	}else if (plr.velocity.x <= 0) {
-		plr.mirrorX(-1);
+		plr.mirrorX();
 	}
 }
 
@@ -20,6 +20,7 @@ function setup() {
 function draw() {
 	background(255);
   drawSprites();
+
 }
 
 function keyPressed() {
