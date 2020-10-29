@@ -5,7 +5,6 @@ let xface = "left";
 function setup() {
 	createCanvas(600, 700);
  	bill = loadImage('assets/billystill.png');
-	billLeft = plr.mirrorX(1);
   plr = createSprite(width/2, height/2, 50, 50);
   plr.velocity.y;
   plr.velocity.x;
