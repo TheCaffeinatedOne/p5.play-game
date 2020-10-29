@@ -1,9 +1,11 @@
 // variable for pictures, and other
 let bill;
 let sprOne;
+function preload(){
+	bill = loadImage('assets/billystill.png');
+}
 function setup() {
 	createCanvas(1350, 600);
- 	bill = loadImage('assets/billystill.png');
  	sprOne = createSprite(width/2, height/2, 50, 50);
   sprOne.velocity.y;
   sprOne.velocity.x;
@@ -19,6 +21,7 @@ function keyPressed() {
 		case 37:
 		case 65:
 			sprOne.velocity.x = -5;
+			sprOne.
 			sprOne.mirrorX(-1);
 			break;
 		case 39:
