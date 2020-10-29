@@ -21,7 +21,6 @@ function keyPressed() {
 		case 37:
 		case 65:
 			sprOne.velocity.x = -5;
-			sprOne.
 			sprOne.mirrorX(-1);
 			break;
 		case 39:
