@@ -9,7 +9,7 @@ function setup() {
   plr.velocity.y;
   plr.velocity.x;
 	plr.addImage(bilstil);
-
+  plr.image(bilstil,10,10,20,20);
 }
 
 
