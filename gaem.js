@@ -1,21 +1,22 @@
-
+// variable for pictures, and other shit
 let bill;
 let left = false;
 
 function setup() {
 	createCanvas(600, 700);
  	bill = loadImage('assets/billystill.png');
+	billLeft = loadImage('assets/billystill2.png');
   plr = createSprite(width/2, height/2, 50, 50);
   plr.velocity.y;
   plr.velocity.x;
 	plr.addImage(bill);
-	if (left = false) {
-	}else if (left = true) {
-		plr.mirrorX(1);
-	}
 }
 function draw() {
 	background(255);
+	if (left = false) {
+	}else if (left = true) {
+		plr.changeImage(billLeft);
+	}
   drawSprites();
 }
 function keyPressed() {
