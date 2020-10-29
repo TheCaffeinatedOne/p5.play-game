@@ -5,7 +5,7 @@ let xface = "left";
 function setup() {
 	createCanvas(600, 700);
  	bill = loadImage('assets/billystill.png');
-  plr = createSprite(width/2, height/2, 50, 50);
+  let plr = createSprite(width/2, height/2, 50, 50);
   plr.velocity.y;
   plr.velocity.x;
 	plr.addImage(bill);
