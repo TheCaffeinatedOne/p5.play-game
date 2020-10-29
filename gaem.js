@@ -1,6 +1,6 @@
 
 let bill;
-
+let left = false;
 
 function setup() {
 	createCanvas(700, 700);
@@ -9,9 +9,9 @@ function setup() {
   plr.velocity.y;
   plr.velocity.x;
 	plr.addImage(bill);
-	if (plr.velocity.x <= 0) {
+	if (left = true) {
 		plr.mirrorX(-1);
-	}else if ( plr.velocity.x >= 0) {
+	}else if ( plr.velocity.x = false) {
 		plr.mirrorX(1);
 	}
 }
@@ -26,10 +26,12 @@ function keyPressed() {
 		case 37:
 		case 65:
 			plr.velocity.x = -5;
+			left = true;
 			break;
 		case 39:
 		case 68:
 			plr.velocity.x = 5;
+			left = false;
 			break;
 		case 38:
 		case 87:
