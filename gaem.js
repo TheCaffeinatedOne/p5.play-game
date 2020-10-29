@@ -3,7 +3,7 @@ let bill;
 let left = false;
 
 function setup() {
-	createCanvas(700, 700);
+	createCanvas(600, 700);
  	bill = loadImage('assets/billystill.png');
   plr = createSprite(width/2, height/2, 50, 50);
   plr.velocity.y;
