@@ -1,6 +1,6 @@
 // variable for pictures, and other
 let bill;
-let left = false;
+let xface = "left";
 
 function setup() {
 	createCanvas(600, 700);
@@ -20,12 +20,12 @@ function keyPressed() {
 		case 37:
 		case 65:
 			plr.velocity.x = -5;
-			left = true;
+			plr.mirrorX(-1);
 			break;
 		case 39:
 		case 68:
 			plr.velocity.x = 5;
-			left = false;
+			plr.mirrorX(1);
 			break;
 		case 38:
 		case 87:
