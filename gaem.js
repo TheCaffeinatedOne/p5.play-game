@@ -1,12 +1,15 @@
 
-let eye;
+let bilstil;
+
+
 function setup() {
 	createCanvas(600, 500);
- 	eye = loadImage('eye.png', 'eye has loaded', 'eye didnt load');
-  plr = createSprite(width/2, height/2, 50, 50);
+ 	bilstil = loadImage('billystill.png');
+  plr = createSprite(width/1, height/1, 50, 50);
   plr.velocity.y;
   plr.velocity.x;
-	plr.addImage(eye);
+	plr.addImage(bilstil);
+
 }
 
 
