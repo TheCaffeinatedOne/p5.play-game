@@ -3,12 +3,13 @@ let bill;
 
 
 function setup() {
-	createCanvas(600, 500);
+	createCanvas(700, 700);
  	bill = loadImage('billystill.png');
   plr = createSprite(width/2, height/2, 50, 50);
   plr.velocity.y;
   plr.velocity.x;
 	plr.addImage(bill);
+	plr.mirrorX(-1);
 }
 
 
