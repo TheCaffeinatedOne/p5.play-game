@@ -11,7 +11,7 @@ function setup() {
 	plr.addImage(bill);
 	if (plr.velocity.x => 0) {
 			plr.mirrorX(-1);
-	}else if (plr.velocity.x <= 0) {
+	}else if (0 => plr.velocity.x) {
 		plr.mirrorX();
 	}
 }
