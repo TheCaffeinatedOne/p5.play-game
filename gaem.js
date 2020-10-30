@@ -3,7 +3,7 @@ let bill;
 let sprOne;
 let walkOne
 function preload(){
-	walkOne = loadAnimation("walkOne","assets/billywalk1.png","assets/billywalk2.png");
+	walkOne = loadAnimation("assets/billywalk1.png","assets/billywalk2.png");
 	bill = loadImage('assets/billystill.png');
 }
 function setup() {
@@ -11,7 +11,7 @@ function setup() {
  	sprOne = createSprite(width/2, height/2, 50, 50);
   sprOne.velocity.y;
   sprOne.velocity.x;
-	sprOne.addAnimation(walkOne);
+	sprOne.addAnimation("bruh", walkOne);
 }
 function draw() {
 	background(255);
