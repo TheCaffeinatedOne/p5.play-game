@@ -23,20 +23,24 @@ function keyPressed() {
 		case 37:
 		case 65:
 			sprOne.velocity.x = -5;
+			sprOne.addAnimation(walkOne);
 			sprOne.mirrorX(-1);
 			break;
 		case 39:
 		case 68:
 			sprOne.velocity.x = 5;
 			sprOne.mirrorX(1);
+			sprOne.addAnimation(walkOne);
 			break;
 		case 38:
 		case 87:
 			sprOne.velocity.y = -5;
+			sprOne.addAnimation(walkOne);
 			break;
 		case 40:
 		case 83:
 			sprOne.velocity.y = 5;
+			sprOne.addAnimation(walkOne);
 			break;
 	}
 }
