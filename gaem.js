@@ -2,6 +2,7 @@
 let bill;
 let sprOne;
 let walkOne
+let move;
 function preload(){
 	walkOne = loadAnimation("assets/billywalk1.png","assets/billywalk1.png","assets/billywalk1.png","assets/billywalk1.png","assets/billywalk2.png","assets/billywalk2.png","assets/billywalk2.png","assets/billywalk2.png",);
 	bill = loadImage('assets/billystill.png');
@@ -11,11 +12,14 @@ function setup() {
  	sprOne = createSprite(width/2, height/2, 50, 50);
   sprOne.velocity.y;
   sprOne.velocity.x;
-	sprOne.addImage(bill);
-
 }
 function draw() {
 	background(255);
+	if (move == true) {
+	sprOne.addAnimation("bruh", walkOne);
+} else if (move == false) {
+	sprOne.addImage(bill);
+}
   drawSprites();
 }
 
@@ -25,23 +29,23 @@ function keyPressed() {
 		case 65:
 			sprOne.velocity.x = -3.5;
 			sprOne.mirrorX(-1);
-			sprOne.addAnimation("bruh", walkOne);
+			move = true;
 			break;
 		case 39:
 		case 68:
 			sprOne.velocity.x = 3.5;
 			sprOne.mirrorX(1);
-			sprOne.addAnimation("bruh", walkOne);
+			move = true;
 			break;
 		case 38:
 		case 87:
 			sprOne.velocity.y = -3.5;
-			sprOne.addAnimation("bruh", walkOne);
+			move = true;
 			break;
 		case 40:
 		case 83:
 			sprOne.velocity.y = 3.5;
-			sprOne.addAnimation("bruh", walkOne);
+			move = true;
 			break;
 	}
 }
@@ -52,23 +56,23 @@ function keyReleased() {
 		case 65:
 			sprOne.velocity.x = 0;
 			sprOne.mirrorX(-1);
-			sprOne.addImage(bill);
+			move = true;
 			break;
 		case 39:
 		case 68:
 			sprOne.velocity.x = 0;
 			sprOne.mirrorX(1);
-			sprOne.addImage(bill);
+			move = true;
 			break;
 		case 38:
 		case 87:
 			sprOne.velocity.y = 0;
-			sprOne.addImage(bill);
+			move = true;
 			break;
 		case 40:
 		case 83:
 			sprOne.velocity.y = 0;
-			sprOne.addImage(bill);
+			move = true;
 			break;
 	}
 }
