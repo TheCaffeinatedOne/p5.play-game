@@ -56,23 +56,23 @@ function keyReleased() {
 		case 65:
 			sprOne.velocity.x = 0;
 			sprOne.mirrorX(-1);
-			move = true;
+			move = false;
 			break;
 		case 39:
 		case 68:
 			sprOne.velocity.x = 0;
 			sprOne.mirrorX(1);
-			move = true;
+			move = false;
 			break;
 		case 38:
 		case 87:
 			sprOne.velocity.y = 0;
-			move = true;
+			move = false;
 			break;
 		case 40:
 		case 83:
 			sprOne.velocity.y = 0;
-			move = true;
+			move = false;
 			break;
 	}
 }
