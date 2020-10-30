@@ -11,8 +11,8 @@ function setup() {
  	sprOne = createSprite(width/2, height/2, 50, 50);
   sprOne.velocity.y;
   sprOne.velocity.x;
-	sprOne.addAnimation("still", bill);
-	sprOne.addAnimation("walkin",animation)
+addAnimation("still", bill);
+addAnimation("walkin",animation)
 }
 function draw() {
 	background(255);
