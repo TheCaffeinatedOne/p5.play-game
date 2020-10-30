@@ -21,9 +21,10 @@ function draw() {
 } else if (move == false) {
 	bruh = sprOne.addImage(bill);
 }
+bruh = 	sprOne.addImage(bill);
   drawSprites();
 }
-bruh = 	sprOne.addImage(bill);
+
 function keyPressed() {
 	switch(keyCode) {
 		case 37:
