@@ -17,6 +17,7 @@ function draw() {
 	background(255);
   drawSprites();
 }
+
 function keyPressed() {
 	switch(keyCode) {
 		case 37:
