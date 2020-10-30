@@ -3,6 +3,7 @@ let bill;
 let sprOne;
 let walkOne
 let move;
+let bruh;
 function preload(){
 	walkOne = loadAnimation("assets/billywalk1.png","assets/billywalk1.png","assets/billywalk1.png","assets/billywalk1.png","assets/billywalk2.png","assets/billywalk2.png","assets/billywalk2.png","assets/billywalk2.png",);
 	bill = loadImage('assets/billystill.png');
@@ -16,13 +17,13 @@ function setup() {
 function draw() {
 	background(255);
 	if (move == true) {
-	sprOne.addAnimation("bruh", walkOne);
+	bruh = sprOne.addAnimation("bruh", walkOne);
 } else if (move == false) {
-	sprOne.addImage(bill);
+	bruh = sprOne.addImage(bill);
 }
   drawSprites();
 }
-
+bruh = 	sprOne.addImage(bill);
 function keyPressed() {
 	switch(keyCode) {
 		case 37:
