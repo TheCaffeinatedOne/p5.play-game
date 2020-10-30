@@ -11,36 +11,37 @@ function setup() {
  	sprOne = createSprite(width/2, height/2, 50, 50);
   sprOne.velocity.y;
   sprOne.velocity.x;
-addAnimation("still", bill);
-addAnimation("walkin",animation)
+	sprOne.addAnimation("still", bill);
+  let walking = sprOne.addAnimation("walkin",animation)
 }
 function draw() {
 	background(255);
   drawSprites();
 }
 
+let walkSpd = 3.5;
 function keyPressed() {
 	switch(keyCode) {
 		case 37:
 		case 65:
-			sprOne.velocity.x = -3.5;
+			sprOne.velocity.x = -walkSpd;
 			sprOne.mirrorX(-1);
 			sprOne.changeAnimation("walkin");
 			break;
 		case 39:
 		case 68:
-			sprOne.velocity.x = 3.5;
+			sprOne.velocity.x = walkSpd;
 			sprOne.mirrorX(1);
 			sprOne.changeAnimation("walkin");
 			break;
 		case 38:
 		case 87:
-			sprOne.velocity.y = -3.5;
+			sprOne.velocity.y = -walkSpd;
 			sprOne.changeAnimation("walkin");
 			break;
 		case 40:
 		case 83:
-			sprOne.velocity.y = 3.5;
+			sprOne.velocity.y = walkSpd;
 			sprOne.changeAnimation("walkin");
 			break;
 	}
