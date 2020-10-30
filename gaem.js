@@ -2,26 +2,20 @@
 let bill;
 let sprOne;
 let walkOne
-let move;
-let bruh;
 function preload(){
 	walkOne = loadAnimation("assets/billywalk1.png","assets/billywalk1.png","assets/billywalk1.png","assets/billywalk1.png","assets/billywalk2.png","assets/billywalk2.png","assets/billywalk2.png","assets/billywalk2.png",);
-	bill = loadImage('assets/billystill.png');
+	bill = loadAnimation("assets/billystill.png","assets/billystill.png");
 }
 function setup() {
 	createCanvas(1350, 600);
  	sprOne = createSprite(width/2, height/2, 50, 50);
   sprOne.velocity.y;
   sprOne.velocity.x;
+	sprOne.addAnimation("still", bill);
+	sprOne.addAnimation("walkin",animation)
 }
 function draw() {
 	background(255);
-	if (move == true) {
-	bruh = sprOne.addAnimation("bruh", walkOne);
-} else if (move == false) {
-	bruh = sprOne.addImage(bill);
-}
-bruh = 	sprOne.addImage(bill);
   drawSprites();
 }
 
@@ -31,23 +25,23 @@ function keyPressed() {
 		case 65:
 			sprOne.velocity.x = -3.5;
 			sprOne.mirrorX(-1);
-			move = true;
+			sprOne.changeAnimation("walkin");
 			break;
 		case 39:
 		case 68:
 			sprOne.velocity.x = 3.5;
 			sprOne.mirrorX(1);
-			move = true;
+			sprOne.changeAnimation("walkin");
 			break;
 		case 38:
 		case 87:
 			sprOne.velocity.y = -3.5;
-			move = true;
+			sprOne.changeAnimation("walkin");
 			break;
 		case 40:
 		case 83:
 			sprOne.velocity.y = 3.5;
-			move = true;
+			sprOne.changeAnimation("walkin");
 			break;
 	}
 }
@@ -58,23 +52,23 @@ function keyReleased() {
 		case 65:
 			sprOne.velocity.x = 0;
 			sprOne.mirrorX(-1);
-			move = false;
+			sprOne.changeAnimation("idk");
 			break;
 		case 39:
 		case 68:
 			sprOne.velocity.x = 0;
 			sprOne.mirrorX(1);
-			move = false;
+			sprOne.changeAnimation("idk");
 			break;
 		case 38:
 		case 87:
 			sprOne.velocity.y = 0;
-			move = false;
+			sprOne.changeAnimation("idk");
 			break;
 		case 40:
 		case 83:
 			sprOne.velocity.y = 0;
-			move = false;
+			sprOne.changeAnimation("idk");
 			break;
 	}
 }
